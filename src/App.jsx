@@ -1,7 +1,7 @@
 import PrivateRoute from "./components/PrivateRoute";
 import Login from "./pages/Login";
 import Sign from "./pages/Sign";
-import { Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 
 function App() {
