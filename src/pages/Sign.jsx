@@ -9,11 +9,12 @@ function Sign() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [province, setProvince] = useState("")
   const [openModal, setOpenModal] = useState(false);
   const [successModalOpen, setSuccessModalOpen] = useState(false);
   const Navigate = useNavigate();
   function handleSubmit() {
-    if (name === "" || email === "" || password === "") {
+    if (name === "" || email === "" || password === "" || province === "") {
       setOpenModal(true);
       return;
     }
@@ -21,6 +22,7 @@ function Sign() {
       name: name,
       email: email,
       password: password,
+      province: province
     };
     CadastrarUser(data);
   }
@@ -75,6 +77,19 @@ function Sign() {
                          focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
           </div>
+          <div>
+            <label className="block text-sm text-gray-700 mb-1">
+              Província
+            </label>
+            <input
+              type="text"
+              onChange={(e) => setProvince(e.target.value)}
+              placeholder="luanda"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md
+                         focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+          </div>
+
 
           <div>
             <label className="block text-sm text-gray-700 mb-1">
